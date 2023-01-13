@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <p>Привет, {{ user }}</p>
+    {% if year %}
+    <p>{{year}}</p>
+    <p>Здорово что ты сказал что тебе {{ get_year_diff(year) }} лет</p>
+    {% endif %}
+</body>
+</html>
+
+

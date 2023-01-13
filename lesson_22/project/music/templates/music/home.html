@@ -1,0 +1,28 @@
+{% load static %}
+{% load l10n %}
+{% load tz %}
+
+
+<html>
+
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="icon" type="image/jpg" href="{% static 'logo.jpg' %}">
+</head>
+
+<body>
+    <ul>
+        <li><a href="{% url 'class_view' %}">Home</a></li>
+        <li><a href="{% url 'contacts' %}">Contacts</a></li>
+    </ul>
+    <h1>Мое резюме</h1>       
+    {{ date|timezone:"Europe/Minsk" }}                                                                                
+    {% block content %}{% endblock %}
+    {% block footer %}
+    <hr>
+    <p>Спасибо за внимание!</p>
+    {% endblock %}
+</body>
+
+</html>
+
